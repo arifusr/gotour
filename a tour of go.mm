@@ -1,4 +1,4 @@
-<map version="freeplane 1.7.0">
+<map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="a tour of go" FOLDED="false" ID="ID_1136273644" CREATED="1599754463936" MODIFIED="1599754483114" STYLE="oval">
 <font SIZE="18"/>
@@ -66,29 +66,62 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="15" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="packages" POSITION="right" ID="ID_890614329" CREATED="1599754498859" MODIFIED="1599754507468">
 <edge COLOR="#ff0000"/>
-<node TEXT="every go program made of packages" ID="ID_1291608101" CREATED="1599754511707" MODIFIED="1599754529474"/>
-<node TEXT="entry point of go program is package main" ID="ID_56156216" CREATED="1599754530789" MODIFIED="1599754568582"/>
+<node TEXT="every go program made of packages" ID="ID_1291608101" CREATED="1599754511707" MODIFIED="1599754529474">
+<node TEXT="packages.go" ID="ID_1430559275" CREATED="1616291026421" MODIFIED="1616291042235">
+<node TEXT="package main&#xa;&#xa;import (&#xa;&#x9;&quot;fmt&quot;&#xa;&#x9;&quot;math/rand&quot;&#xa;)&#xa;&#xa;func main() {&#xa;&#x9;fmt.Println(&quot;My favorite number is&quot;, rand.Intn(10))&#xa;}" ID="ID_84838934" CREATED="1616291032702" MODIFIED="1616291034257"/>
+</node>
+</node>
+<node TEXT="entry point of go program is package main" ID="ID_56156216" CREATED="1599754530789" MODIFIED="1599754568582">
+<node TEXT="packages.go" ID="ID_986176963" CREATED="1616291026421" MODIFIED="1616291042235">
+<node TEXT="package main&#xa;&#xa;import (&#xa;&#x9;&quot;fmt&quot;&#xa;&#x9;&quot;math/rand&quot;&#xa;)&#xa;&#xa;func main() {&#xa;&#x9;fmt.Println(&quot;My favorite number is&quot;, rand.Intn(10))&#xa;}" ID="ID_1235446190" CREATED="1616291032702" MODIFIED="1616291034257"/>
+</node>
+</node>
 <node TEXT="import" ID="ID_611647519" CREATED="1599754603470" MODIFIED="1599754608598">
-<node TEXT="factored import" ID="ID_702256767" CREATED="1599756110063" MODIFIED="1599756122845"/>
-<node TEXT="multiple import" ID="ID_632942" CREATED="1599756123296" MODIFIED="1599756129791"/>
+<node TEXT="factored import" ID="ID_702256767" CREATED="1599756110063" MODIFIED="1599756122845">
+<node TEXT="import (&#xa;&#x9;&quot;fmt&quot;&#xa;&#x9;&quot;math&quot;&#xa;)" ID="ID_1985299363" CREATED="1616291081983" MODIFIED="1616291082743"/>
+</node>
+<node TEXT="multiple import" ID="ID_632942" CREATED="1599756123296" MODIFIED="1599756129791">
+<node TEXT="import &quot;fmt&quot;&#xa;import &quot;math&quot;" ID="ID_807067305" CREATED="1616291103602" MODIFIED="1616291104291"/>
+</node>
 </node>
 <node TEXT="export" ID="ID_818895155" CREATED="1599754609527" MODIFIED="1599754611856">
-<node TEXT="Capital letter" ID="ID_23017122" CREATED="1599756169036" MODIFIED="1599756175424"/>
+<node TEXT="Capital letter" ID="ID_23017122" CREATED="1599756169036" MODIFIED="1599756175424">
+<node TEXT="package main&#xa;&#xa;import (&#xa;&#x9;&quot;fmt&quot;&#xa;&#x9;&quot;math&quot;&#xa;)&#xa;&#xa;func main() {&#xa;&#x9;fmt.Println(math.pi)&#xa;}" ID="ID_412292944" CREATED="1616291152553" MODIFIED="1616291154089"/>
+<node TEXT="math.pi will error" ID="ID_371081147" CREATED="1616291154667" MODIFIED="1616291161379"/>
+<node TEXT="math.Pi not error" ID="ID_1877255685" CREATED="1616291161768" MODIFIED="1616291167696"/>
+</node>
 </node>
 </node>
 <node TEXT="functions" POSITION="right" ID="ID_297538466" CREATED="1599756324035" MODIFIED="1599756330246">
 <edge COLOR="#0000ff"/>
-<node TEXT="zero or more argument" ID="ID_433260807" CREATED="1599756342442" MODIFIED="1599756352977"/>
-<node TEXT="type" ID="ID_889628864" CREATED="1599756380893" MODIFIED="1599756382840"/>
-<node TEXT="omit type" ID="ID_888446262" CREATED="1599756491752" MODIFIED="1599756496860"/>
-<node TEXT="return multiple" ID="ID_465041897" CREATED="1599756590867" MODIFIED="1599756598945"/>
-<node TEXT="naked return" ID="ID_747985621" CREATED="1599756750953" MODIFIED="1599756755440"/>
+<node TEXT="zero or more argument" ID="ID_433260807" CREATED="1599756342442" MODIFIED="1599756352977">
+<node TEXT="func add(x int, y int) int {&#xa;&#x9;return x + y&#xa;}" ID="ID_1342959812" CREATED="1616291258803" MODIFIED="1616291259555"/>
+</node>
+<node TEXT="type" ID="ID_889628864" CREATED="1599756380893" MODIFIED="1599756382840">
+<node TEXT="x int, y int" ID="ID_1602417103" CREATED="1616291277805" MODIFIED="1616291279032"/>
+</node>
+<node TEXT="omit type" ID="ID_888446262" CREATED="1599756491752" MODIFIED="1599756496860">
+<node TEXT="x, y int" ID="ID_1346393508" CREATED="1616291284200" MODIFIED="1616291284931"/>
+</node>
+<node TEXT="return multiple" ID="ID_465041897" CREATED="1599756590867" MODIFIED="1599756598945">
+<node TEXT="func swap(x, y string) (string, string) {&#xa;&#x9;return y, x&#xa;}" ID="ID_479924030" CREATED="1616291299021" MODIFIED="1616291299601"/>
+</node>
+<node TEXT="naked return" ID="ID_747985621" CREATED="1599756750953" MODIFIED="1599756755440">
+<node TEXT="func split(sum int) (x, y int) {&#xa;&#x9;x = sum * 4 / 9&#xa;&#x9;y = sum - x&#xa;&#x9;return&#xa;}" ID="ID_1503881968" CREATED="1616291352802" MODIFIED="1616291353633"/>
+</node>
 </node>
 <node TEXT="variables" POSITION="right" ID="ID_693674583" CREATED="1599756905229" MODIFIED="1599756910221">
 <edge COLOR="#00ff00"/>
-<node TEXT="var keyword" ID="ID_712574536" CREATED="1599756937970" MODIFIED="1599756944159"/>
-<node TEXT="initializer" ID="ID_209061471" CREATED="1599757111094" MODIFIED="1599757114955"/>
-<node TEXT="sort assignment" ID="ID_1048271369" CREATED="1599785697359" MODIFIED="1599785785233"/>
+<node TEXT="var keyword  declares a list of variables" ID="ID_712574536" CREATED="1599756937970" MODIFIED="1616291387675">
+<node TEXT="package main&#xa;&#xa;import &quot;fmt&quot;&#xa;&#xa;var c, python, java bool&#xa;&#xa;func main() {&#xa;&#x9;var i int&#xa;&#x9;fmt.Println(i, c, python, java)&#xa;}" ID="ID_798584987" CREATED="1616291392630" MODIFIED="1616291393266"/>
+</node>
+<node TEXT="initializer" ID="ID_209061471" CREATED="1599757111094" MODIFIED="1599757114955">
+<node TEXT="var i, j int = 1, 2" ID="ID_1799995012" CREATED="1616291414042" MODIFIED="1616291414674"/>
+</node>
+<node TEXT="sort assignment" ID="ID_1048271369" CREATED="1599785697359" MODIFIED="1599785785233">
+<node TEXT="k := 3&#xa;&#x9;c, python, java := true, false, &quot;no!&quot;" ID="ID_198843595" CREATED="1616291461221" MODIFIED="1616291461827"/>
+</node>
+<node TEXT="Outside a function, every statement begins with a keyword" ID="ID_1203105383" CREATED="1616291470932" MODIFIED="1616291471499"/>
 </node>
 <node TEXT="basic type" POSITION="right" ID="ID_1408201929" CREATED="1599785814108" MODIFIED="1599785819567">
 <edge COLOR="#ff00ff"/>
@@ -177,7 +210,7 @@
 <node TEXT="skip the index or value pass to _" ID="ID_857391632" CREATED="1599791297377" MODIFIED="1599791308314"/>
 </node>
 </node>
-<node TEXT="map" FOLDED="true" POSITION="right" ID="ID_571752210" CREATED="1599792765608" MODIFIED="1599792767136">
+<node TEXT="map" POSITION="right" ID="ID_571752210" CREATED="1599792765608" MODIFIED="1599792767136">
 <edge COLOR="#00ff00"/>
 <node TEXT="make(map[string]T)" ID="ID_1090085017" CREATED="1599792834959" MODIFIED="1599792850298"/>
 <node TEXT="literal" ID="ID_1949373746" CREATED="1599793011510" MODIFIED="1599793013724">
